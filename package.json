@@ -1,0 +1,67 @@
+{
+  "name": "vscode-git-push-progress",
+  "displayName": "Push Progress",
+  "description": "Extra git menu option plus command to push all commits and output the progress to output console",
+  "version": "1.0.0",
+  "publisher": "luis-domenech",
+  "engines": {
+    "vscode": "^1.45.0"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "categories": [
+    "Debuggers"
+  ],
+  "icon": "images/git-push-progress-logo.png",
+  "bugs": {
+    "url": "https://github.com/Luis-Domenech/vscode-git-push-progress/issues",
+    "email": "luisfabiandomenech@gmail.com"
+  },
+  "homepage": "https://github.com/Luis-Domenech/vscode-git-push-progress/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luis-Domenech/vscode-git-push-progress.git"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "license": "GPL-3.0",
+  "main": "./out/",
+  "contributes": {
+    "menus": {
+      "scm/title": [
+        {
+          "command": "git.pushProgress",
+          "group": "1_header@2",
+          "when": "scmProvider == git"
+        }
+      ],
+      "git.pullpush": [
+        {
+          "command": "git.pushProgress",
+          "group": "2_main@3"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "git.pushProgress",
+        "title": "Push Progress",
+        "when": "config.git.enabled && !git.missing && gitOpenRepositoryCount != 0"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.157",
+    "@types/node": "^14.0.24",
+    "@types/vscode": "^1.47.0",
+    "typescript": "^3.9.7",
+    "vsce": "^1.81.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.19"
+  }
+}
