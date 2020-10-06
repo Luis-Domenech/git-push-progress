@@ -9,11 +9,11 @@ trigger:
 strategy:
   matrix:
     linux:
-      imageName: 'ubuntu-16.04'
+      imageName: 'ubuntu-18.04'
     mac:
-      imageName: 'macos-10.13'
+      imageName: 'macos-10.15'
     windows:
-      imageName: 'vs2017-win2016'
+      imageName: 'windows-2019'
 
 pool:
   vmImage: $(imageName)
@@ -22,7 +22,7 @@ steps:
 
 - task: NodeTool@0
   inputs:
-    versionSpec: '12.x'
+    versionSpec: '13.x'
   displayName: 'Install Node.js'
 
 - bash: |
@@ -33,11 +33,10 @@ steps:
 
 - bash: |
     echo ">>> Compile vscode-git-push-progress"
-    yarn && yarn compile
+    yarn && yarn install --production=true && yarn compile
     echo ">>> Compiled vscode-git-push-progress"
-    cd tests
     echo ">>> Run sample integration test"
-    yarn && yarn compile && yarn test
+    yarn test
   displayName: Run Tests
   env:
     DISPLAY: ':99.0'
