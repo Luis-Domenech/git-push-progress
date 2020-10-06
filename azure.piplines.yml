@@ -33,10 +33,11 @@ steps:
 
 - bash: |
     echo ">>> Compile vscode-git-push-progress"
-    yarn && yarn install --production=true && yarn compile
+    yarn && yarn install --production=false && yarn compile
     echo ">>> Compiled vscode-git-push-progress"
     echo ">>> Run sample integration test"
     yarn test
+
   displayName: Run Tests
   env:
     DISPLAY: ':99.0'
