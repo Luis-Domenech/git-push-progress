@@ -1,16 +1,18 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "outDir": "out",
-        "lib": [
-            "es6"
-        ],
-        "sourceMap": false,
-        "esModuleInterop": true,
-        "rootDir": "src"
+      "module": "commonjs",
+      "target": "es6",
+      "outDir": "out",
+      "lib": ["es6"],
+      "sourceMap": true,
+      "removeComments": false,
+      "esModuleInterop": true,
+      "allowJs": true
     },
-    "exclude": [
-        "node_modules"
-    ]
-}
+    "include": [
+        "src",
+        "tests",
+        "lib",
+    ],
+    "exclude": ["node_modules", ".vscode-test"]
+  }
