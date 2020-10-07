@@ -11,7 +11,7 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "c": "tsc ./tests/runTest.js ./out/t.js",
-    "test": "node ./out/tests/runTest.js",
+    "test": "node ./out/tests/runTest.js"
   },
   "categories": [
     "Debuggers"
