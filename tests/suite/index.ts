@@ -1,14 +1,13 @@
 import * as path from 'path';
-// import * as Mocha from 'mocha';
-import 'mocha';
+const Mocha = require('mocha');
 import glob from 'glob';
 
 export function run(testsRoot: string, cb: (error: any, failures?: number) => void): void {
 	// Create the mocha test
-	// const mocha = new Mocha({
-	// 	ui: 'tdd'
-	// });
-	// mocha.useColors(true);
+	const mocha = new Mocha({
+		ui: 'tdd'
+	});
+	mocha.options.color = true
 
 	glob('**/**.test.js', { cwd: testsRoot }, (err, files) => {
 		if (err) {

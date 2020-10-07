@@ -5,6 +5,7 @@ import { runTests, downloadAndUnzipVSCode, resolveCliPathFromVSCodeExecutablePat
 
 async function go() {
 	try {
+
 		const extensionDevelopmentPath = path.resolve(__dirname, '../');
 		const extensionTestsPath = path.resolve(__dirname, './suite');
 
@@ -15,6 +16,7 @@ async function go() {
 			extensionDevelopmentPath,
 			extensionTestsPath
 		});
+
 
 		const extensionTestsPath2 = path.resolve(__dirname, './suite2');
 		const testWorkspace = path.resolve(__dirname, './test-fixtures/fixture1');
@@ -28,6 +30,7 @@ async function go() {
 			launchArgs: [testWorkspace]
 		});
 
+
 		/**
 		 * Use 1.36.1 release for testing
 		 */
@@ -37,16 +40,6 @@ async function go() {
 		// 	extensionTestsPath,
 		// 	launchArgs: [testWorkspace]
         // });
-        
-        /**
-		 * Use 1.45.0 release for testing
-		 */
-		await runTests({
-			version: '1.49.3',
-			extensionDevelopmentPath,
-			extensionTestsPath,
-			launchArgs: [testWorkspace]
-		});
 
 		/**
 		 * Use Insiders release for testing
@@ -58,10 +51,12 @@ async function go() {
 			launchArgs: [testWorkspace]
 		});
 
+
 		/**
 		 * Noop, since 1.45.0 already downloaded to .vscode-test/vscode-1.45.0
 		 */
 		await downloadAndUnzipVSCode('1.49.3');
+
 
 		/**
 		 * Manually download VS Code 1.35.0 release for testing.
@@ -73,6 +68,7 @@ async function go() {
 			extensionTestsPath,
 			launchArgs: [testWorkspace]
 		});
+
 
 		/**
 		 * Install Python extension
@@ -107,7 +103,7 @@ async function go() {
 			await runTests({
 				extensionDevelopmentPath,
 				extensionTestsPath,
-				version: '1.40.0',
+				// version: '1.40.0',
 				platform: 'win32-x64-archive'
 			});
 		}
