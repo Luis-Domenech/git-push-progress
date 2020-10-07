@@ -2,7 +2,7 @@
   "name": "vscode-git-push-progress",
   "displayName": "Git Push Progress",
   "description": "Extra git menu option plus command to push all commits and output the progress to output console",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "luis-domenech",
   "engines": {
     "vscode": "^1.47.0"
