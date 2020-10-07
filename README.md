@@ -15,7 +15,7 @@ Install from the VS Code Marketplace by searching for vscode-git-push-progress
 
 ## Complicated Install
 
-Launch VS Code Quick Open (`cmd`/`ctrl` + `p`), paste the following command, and press enter.
+Launch VS Code Quick Open (`cmd`/`ctrl` + `p`), paste the following command, and press enter:
 
 ```
 ext install vscode-git-push-progress
