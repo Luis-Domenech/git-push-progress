@@ -2,7 +2,7 @@
   "name": "vscode-git-push-progress",
   "displayName": "Git Push Progress",
   "description": "Extra git menu option plus command to push all commits and output the progress to output console",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "luis-domenech",
   "engines": {
     "vscode": "^1.47.0"
@@ -12,7 +12,7 @@
     "compile": "tsc -p ./",
     "c": "tsc ./tests/runTest.js ./out/t.js",
     "test": "node ./out/tests/runTest.js",
-    "deploy": "vsce publish minor"
+    "deploy": "vsce publish"
   },
   "categories": [
     "Debuggers"
