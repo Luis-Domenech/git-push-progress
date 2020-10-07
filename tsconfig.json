@@ -9,8 +9,8 @@
         "mocha"
       ],
       "sourceMap": true,
-      "removeComments": false,
       "esModuleInterop": true,
+      "removeComments": true,
       "allowJs": true
     },
     "include": [
