@@ -12,7 +12,7 @@
     "compile": "tsc -p ./",
     "c": "tsc ./tests/runTest.js ./out/t.js",
     "test": "node ./out/tests/runTest.js",
-    "deploy": "vsce publish"
+    "deploy": "vsce publish minor"
   },
   "categories": [
     "Debuggers"
