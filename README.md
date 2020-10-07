@@ -7,7 +7,7 @@
 
 Extra git menu command to push commits and output the progress to output console
 
-![](https://raw.githubusercontent.com/Luis-Domenech/vscode-git-push-progress/master/images/git-push-progress.gif)
+![](https://raw.githubusercontent.com/Luis-Domenech/vscode-git-push-progress/main/images/git-push-progress.gif)
 
 ## Regular Install
 
@@ -32,17 +32,17 @@ After committing some changes to your local branch, instead of pressing Push, pr
 
 ## Change Log
 
-### 2020-10-05
+### 2020-10-07
 
 1. Initial Release. Base code came from https://github.com/leftstick/vscode-git-tags
 
 ## LICENSE ##
 
-[GPL v3 License](https://raw.githubusercontent.com/Luis-Domenech/vscode-git-push-progress/master/LICENSE)
+[GPL v3 License](https://raw.githubusercontent.com/Luis-Domenech/vscode-git-push-progress/main/LICENSE)
 
 
 [vs-url]: https://marketplace.visualstudio.com/items?itemName=luis-domenech.vscode-git-push-progress
-[vs-image]: https://vsmarketplacebadge.apphb.com/version/luis-domenech.vscode-git-tags.svg
-[install-url]: https://vsmarketplacebadge.apphb.com/installs/luis-domenech.vscode-git-push-progress.svg
+[vs-image]: https://vsmarketplacebadge.apphb.com/version-short/luis-domenech.vscode-git-push-progress.svg
+[install-url]: https://vsmarketplacebadge.apphb.com/installs-short/luis-domenech.vscode-git-push-progress.svg
 [rate-url]: https://vsmarketplacebadge.apphb.com/rating/luis-domenech.vscode-git-push-progress.svg
 [license-url]: https://img.shields.io/github/license/Luis-Domenech/vscode-git-push-progress.svg
