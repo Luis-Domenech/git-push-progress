@@ -18,9 +18,6 @@ strategy:
 pool:
   vmImage: $(imageName)
 
-variables:
-- group: secrets
-
 steps:
 - task: NodeTool@0
   inputs:
