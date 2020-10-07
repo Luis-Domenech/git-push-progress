@@ -4,6 +4,14 @@ trigger:
     - master
   tags:
     include:
+    - v*
+    
+trigger:
+  branches:
+    include:
+    - master
+  tags:
+    include:
     - refs/tags/v*
 
 strategy:
