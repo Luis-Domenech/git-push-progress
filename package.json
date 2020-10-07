@@ -1,6 +1,6 @@
 {
   "name": "vscode-git-push-progress",
-  "displayName": "Push Progress",
+  "displayName": "Git Push Progress",
   "description": "Extra git menu option plus command to push all commits and output the progress to output console",
   "version": "1.0.0",
   "publisher": "luis-domenech",
@@ -11,7 +11,8 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "c": "tsc ./tests/runTest.js ./out/t.js",
-    "test": "node ./out/tests/runTest.js"
+    "test": "node ./out/tests/runTest.js",
+    "deploy": "vsce publish --yarn"
   },
   "categories": [
     "Debuggers"
@@ -36,6 +37,7 @@
       "scm/title": [
         {
           "command": "git.pushProgress",
+          "title": "Push Progress",
           "group": "1_header@2",
           "when": "scmProvider == git"
         }
@@ -43,6 +45,7 @@
       "git.pullpush": [
         {
           "command": "git.pushProgress",
+          "title": "Push Progress",
           "group": "2_main@3"
         }
       ]
