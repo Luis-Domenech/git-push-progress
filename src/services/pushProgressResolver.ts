@@ -9,7 +9,7 @@ export function gitPush(term: vscode.OutputChannel, statBar: vscode.StatusBarIte
 
         term.show(true)
         term.appendLine("Git Push Progress Initiated...\n")
-        vscode.window.setStatusBarMessage("Git Push Progress Initiated", 1000 * 2)
+        vscode.window.setStatusBarMessage("Push Progress Initiated", 1000 * 2)
 
         let dir = vscode.workspace.workspaceFolders[0].uri.fsPath
 
@@ -42,7 +42,7 @@ export function gitPush(term: vscode.OutputChannel, statBar: vscode.StatusBarIte
             console.log("Child spawn finished executing command")
             console.log("Closing code: " + code)
             if (code != '0') {
-                reject("Git Push failed with closing code: " + code)
+                reject("Push Progress failed with closing code: " + code)
             }
             resolve(output)
         })

@@ -24,7 +24,7 @@ export function pushProgress(term: vscode.OutputChannel, statBar: vscode.StatusB
             // vscode.window.showInformationMessage('Push progress Finished Succesfully')
             term.appendLine("Push Progress Succeeded\n")
             statBar.hide();
-            vscode.window.setStatusBarMessage("Git Push Progress Succeeded", 1000 * 10)
+            vscode.window.setStatusBarMessage("Push Progress Succeeded", 1000 * 10)
         })
         .catch(err => {
             console.log("Error encountered during Progress Push")
@@ -32,7 +32,7 @@ export function pushProgress(term: vscode.OutputChannel, statBar: vscode.StatusB
             vscode.window.showErrorMessage(err)
             term.appendLine("Push Progress Failed")
             statBar.hide();
-            vscode.window.setStatusBarMessage("Git Push Progress Failed\n", 1000 * 10)
+            vscode.window.setStatusBarMessage("Push Progress Failed\n", 1000 * 10)
         }) 
     });
 }
