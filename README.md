@@ -5,7 +5,9 @@
 ![][rate-url]
 ![][license-url]
 
-Extra git menu command to push commits and output the progress to output console
+Extra git menu command and key binding to push commits and output the progress to the output console. 
+
+When you do git push by using the Push command from the Git Menu, you don't get any feedback until the push finished or fails. If you push large files or many files, you'll then be stuck wondering when the push will finish and that's a problem. This Extension fixes that.
 
 ![](https://raw.githubusercontent.com/Luis-Domenech/vscode-git-push-progress/main/images/git-push-progress.gif)
 
@@ -31,6 +33,10 @@ After committing some changes to your local branch, instead of pressing Push, pr
 
 
 ## Change Log
+
+### 2020-10-09
+
+2. Added Key Binding to Ctrl + Alt + Enter. It only activates while the Git Sidebar menu is activate just like Ctrl + Enter, which auto commits to local branch all staged changes. Ideal workflow would be to commit staged changes with Ctrl + Enter and then auto Push Progress with Ctrl + Alt + Enter.
 
 ### 2020-10-07
 
