@@ -7,7 +7,7 @@
 
 Extra git menu command and key binding to push commits and output the progress to the output console. 
 
-When you do git push by using the Push command from the Git Menu, you don't get any feedback until the push finished or fails. If you push large files or many files, you'll then be stuck wondering when the push will finish and that's a problem. This Extension fixes that.
+When you do git push by using the Push command from the Git Menu, you don't get any feedback until the push finishes or fails. If you push large files and/or many files at once, you'll then be stuck wondering when the push will finish and that's a problem. This Extension fixes that.
 
 ![](https://raw.githubusercontent.com/Luis-Domenech/vscode-git-push-progress/main/images/git-push-progress.gif)
 
