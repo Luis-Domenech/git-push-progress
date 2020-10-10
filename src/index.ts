@@ -20,6 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
         statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
     }
 
+    statusBarItem.show()
 
     context.subscriptions.push(pushProgress(term, statusBarItem));
 }

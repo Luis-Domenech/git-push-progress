@@ -23,7 +23,7 @@ export function pushProgress(term: vscode.OutputChannel, statBar: vscode.StatusB
             console.log("Push Progress executed successfully")
             // vscode.window.showInformationMessage('Push progress Finished Succesfully')
             term.appendLine("Push Progress Succeeded\n")
-            statBar.hide();
+            // statBar.hide();
             vscode.window.setStatusBarMessage("Push Progress Succeeded", 1000 * 10)
         })
         .catch(err => {

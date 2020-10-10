@@ -9,7 +9,10 @@ export function gitPush(term: vscode.OutputChannel, statBar: vscode.StatusBarIte
 
         term.show(true)
         term.appendLine("Git Push Progress Initiated...\n")
-        vscode.window.setStatusBarMessage("Push Progress Initiated", 1000 * 2)
+        statBar.text = "Push Progress Initiated"
+        statBar.show()
+        
+        // vscode.window.setStatusBarMessage("Push Progress Initiated", 1000 * 2)
 
         let dir = vscode.workspace.workspaceFolders[0].uri.fsPath
 
@@ -28,17 +31,24 @@ export function gitPush(term: vscode.OutputChannel, statBar: vscode.StatusBarIte
             term.appendLine(data)
             data = data.toString()
             output += data
+            if (data.includes("Counting") || data.includes("Compressing") || data.includes("Writing") || data.includes("remote: Resolving deltas")) {
+                statBar.text = data
+            }
         })
 
         child.stderr.setEncoding('utf8');
-        child.stderr.on("data", (error) => {
-            console.log("Recevied error: " + error)
-            term.appendLine(error);
-            error = error.toString()
-            output += error;
+        child.stderr.on("data", (data) => {
+            term.appendLine(data)
+            data = data.toString()
+            output += data
+            if (data.includes("Counting") || data.includes("Compressing") || data.includes("Writing") || data.includes("remote: Resolving deltas")) {
+                statBar.text = data
+            }
         })
 
         child.on("close", (code) => {
+            statBar.hide();
+            statBar.text = ''
             console.log("Child spawn finished executing command")
             console.log("Closing code: " + code)
             if (code != '0') {
